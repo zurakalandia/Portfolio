@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+/*----------------------------------------------------------
+CSS Reset*/
+
+
+header {
+    background: linear-gradient(90deg, #354F52, #2F3E46);
+    font-family: Oswald;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+
+
+.headerLogo p {
+    color: #EAF4F4;
+    font-size: 1.5em;
+}
+
+header a {
+    color: #CCE3DE;
+    text-decoration: 0;
+    border-left: 1px solid #EAF4F4;
+    padding: 5px 20px;
+}
+
+nav p:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+/*----------------------------------------------------------
+End of header design*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    background-color: #F6FFF8;
+    width: 100%
+}
+
+section, footer {
+    width: 100%;
+}
+
+.home {
+    
+    background-image: url(image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    filter: opacity(0.9);
+    display: flex;
+    border-bottom: 5px solid #84A98C;
+    align-items: center;
+    
+}
+
+.home p {
+    color: white;
+    font-size: 3em;
+    max-width: 50%;
+   
+    margin-left: 15%;
+    animation: fadeInText 2s ease forwards;
+    
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------
+End of home design*/
+
+.imgMe {
+    max-width: 100px;
+    border-radius: 50%;
+    border: 3px solid #CCE3DE;
+    transition: all 0.3s ease;
+}
+
+.imgMe:hover {
+    border: 9px solid #A4C3B2;
+    transform: scale(1.2);
+}
+
+.aboutMe {
+    
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.header {
+    font-size: 3em;
+    color: #2F3E46;
+    max-width: 80%;
+    text-align: center;
+}
+
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.leftFlexContainer {
+    
+    display: flex;
+    background: linear-gradient(45deg, #354F52, #2F3E46);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    text-align: center;
+    gap: 30px;
+    max-width: 350px;
+    border-radius: 15px;
+
+}
+
+.leftFlexContainer p {
+    color: #EAF4F4;
+}
+
+.rightGridContainer {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.rightGridContainer img {
+    max-width: 75px;
+}
+
+.rightGridContainer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #EAF4F4;
+    padding: 40px;
+    color: #2F3E46;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.rightGridContainer div:hover {
+    background-color: #CCE3DE;
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+
+.py {
+    border-bottom: 5px solid black;
+}
+
+.html {
+    border-bottom: 5px solid #ff7816;
+}
+
+.css {
+    border-bottom: 5px solid #2196f3;
+}
+
+.js {
+    border-bottom: 5px solid #ffdf00;
+}
+
+.image3 {
+    max-height: 422px;
+    border-radius: 15px;
+}
+
+/*----------------------------------------------------------
+End of about me design*/
+
+.projects {
+    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projectWrapper {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.projectWrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 2em;
+    max-width: 275px;
+    background-color: #6B9080;
+    border-radius: 15px;
+    color: #EAF4F4;
+    gap: 20px;
+    border: 6px solid #6B9080;
+    position: relative;
+}
+
+.projectWrapper div img {
+    
+    width: 100%;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.projectWrapper button {
+    width: 75px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #52796F;
+    border: 2px solid #52796F;
+    color: #EAF4F4;
+    transition: all 0.4s ease;
+}
+
+.projectWrapper button:hover {
+    background-color: #EAF4F4;
+    color: #52796F;
+    transform: scale(1.2);
+}
+
+.shownText {
+    
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hoverText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projectWrapper div:hover img {
+    opacity: 0;
+}
+
+.projectWrapper div:hover .shownText {
+    opacity: 0;
+}
+
+.projectWrapper div:hover .hoverText {
+    opacity: 1;
+}
+
+.github {
+    width: 200px;
+    max-height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.3em;
+    background-color: #EAF4F4;
+    border: 0;
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.github:hover {
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.projects a {
+    text-decoration: 0;
+}
+
+.github img {
+    max-width: 25px;
+}
+
+/*----------------------------------------------------------
+End of projects design*/
+
+.form {
+    
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background: linear-gradient(45deg, #84A98C, #354F52);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+    width: 500px;
+    padding: 30px 40px ;
+    gap: 20px;
+    max-width: 90%;
+
+}
+
+form p {
+    font-size: 2em;
+    color: #EAF4F4
+}
+
+input {
+    border-radius: 5px;;
+    padding: 10px 15px;
+    color: #2F3E46;
+    border: none;
+    background-color: #CCE3DE;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"] {
+    width: 100px;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+input:hover {
+    transform: scale(1.05);
+
+}
+
+textarea {
+    border-radius: 5px;;
+    padding: 10px 15px;
+    color: #2F3E46;
+    border: none;
+    background-color: #CCE3DE;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px
+}
+
+:focus {
+    outline: 0
+}
+
+/*----------------------------------------------------------
+End of form design*/
+
+footer {
+    padding: 50px;
+    background: linear-gradient(90deg, #354F52, #2F3E46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px
+}
+
+.upperFooter {
+    font-size: 2em;
+    color: #CCE3DE
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #F6FFF8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.circle img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.bottomFooter {
+    display: flex;
+    gap: 20px
+}
+
+.circle:hover {
+    transform: scale(1.2);
+}
+
+/*----------------------------------------------------------
+End of footer design*/
+
+
+.leftFlexContainer, .image3, .projectWrapper div, form {
+    box-shadow: 0px 0px 15px -7px black;
+}
+
+.rightGridContainer div {
+    box-shadow: 0px 0px 15px -10px black;
+}
+
+
+/*------End of shadows------*/
+
+.animated {
+    opacity: 0;
+    animation: none;
+}
+
+.slideUp.visible {
+    animation: slideUpIn 0.8s ease forwards;
+}
+
+.slideRight.visible {
+    animation: slideRightIn 0.8s ease forwards;
+}
+
+.slideLeft.visible {
+    animation: slideLeftIn 0.8s ease forwards;
+}
+
+/*---end of slideIn---*/
+
+
+
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/*-------------------------------------*/
+
+
+@keyframes slideLeftIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+
+
+
+/*-------------------------------------*/
+
+
+@keyframes slideRightIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/*---------------------------------------------
+responsive*/
+
+@media (max-width: 925px) {
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .image3 {
+        max-height: none;
+        max-width: 350px;
+    }
+
+    .projectWrapper {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .home {
+        background-position: 70%;
+        
+    }
+}
+
+
+
+@media (max-width: 375px) {
+    .rightGridContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        flex-direction: column;
+        
+    }
+
+    .headerLogo p{
+        font-size: 3em;
+    }
+
+    .home p {
+        max-width: 90%;
+        margin: 0;
+        text-align: center;
+        
+    }
+
+    .home {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 475px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+
+    nav a {
+        border-left: 0;
+        border-bottom: 1px solid #EAF4F4;
+        padding: 20px 5px;
+        font-size: 1.5em;
+        width: 100px;
+    }
+
+}
+
+
+
